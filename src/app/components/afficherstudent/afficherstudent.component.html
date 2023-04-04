@@ -1,0 +1,59 @@
+<body>
+  <br /><br />
+  <div id="login">
+    <h3 class="text-center text-white pt-5">details d'un etudiant</h3>
+    <div class="container">
+      <div id="login-row" class="row justify-content-center align-items-center">
+        <div id="login-column" class="col-md-6">
+          <div id="login-box" class="col-md-12">
+            <form>
+              <div class="form-group">
+                <br />
+                <br />
+
+                <label for="name" class="text-info">Identifiant:</label><br />
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  value="{{ student.id }}"
+                  disabled
+                />
+              </div>
+              <div class="form-group">
+                <label for="name" class="text-info">Name:</label><br />
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  value="{{ student.name }}"
+                  disabled
+                />
+              </div>
+              <div class="form-group">
+                <label for="age" class="text-info">Age:</label><br />
+                <input
+                  type="text"
+                  name="age"
+                  class="form-control"
+                  value="{{ student.age }}"
+                  disabled
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  style="width: 100px"
+                  type="submit"
+                  value="Retour"
+                  (click)="onclik()"
+                  class="btn btn-info btn-md"
+                />
+                <br />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

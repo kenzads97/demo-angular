@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row">
+    <h2 style="text-align: center">liste des etudiants</h2>
+    <br /><br />
+    <div class="col-md-9">
+      <a
+        href="form"
+        class="btn btn-primary"
+        style="height: 50px; width: 75px; font-size: 20px; float: right"
+      >
+        Add
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi bi-plus-lg"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"
+          />
+        </svg>
+      </a>
+      <table class="table table-list-search">
+        <thead>
+          <tr>
+            <th>Identidiant</th>
+            <th>Nom et Prenom</th>
+            <th>Age</th>
+            <th colspan="3" style="text-align: center">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let stud of students">
+            <td>{{ stud.id }}</td>
+            <td>{{ stud.name }}</td>
+            <td>{{ stud.age }}</td>
+            <td>
+              <button
+                class="btn btn-primary"
+                (click)="onajouterStudent(stud.id)"
+              >
+                afficher
+              </button>
+            </td>
+            <td>
+              <button
+                class="btn btn-primary"
+                (click)="onupdateStudent(stud.id)"
+              >
+                modifier
+              </button>
+            </td>
+            <td>
+              <button
+                class="btn btn-primary"
+                (click)="ondeleteStudent(stud.id)"
+              >
+                supprimer
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

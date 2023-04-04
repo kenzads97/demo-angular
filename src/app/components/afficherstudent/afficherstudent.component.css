@@ -1,0 +1,15 @@
+body {
+    margin-top: -20px;
+    height: 100vh;
+  }
+  .container {
+    margin-top: 180px;
+    margin-left: 350px;
+    border: 1px solid #d6cece;
+    background-color: #dad9df;
+    margin-top: 120px;
+    max-width: 900px;
+  }
+  input {
+    width: 820px;
+  }
